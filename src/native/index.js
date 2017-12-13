@@ -13,14 +13,16 @@ import withTheme from '../hoc/withTheme'
 
 import type { Target } from '../types'
 
-import VRCStyleSheet from '../CustomButton/VRCStyleSheet'
+// import VRCStyleSheet from '../CustomButton/VRCStyleSheet'
+import config, { setStyleSheet } from '../config'
 
 const constructWithOptions = _constructWithOptions(css)
 
 // NOTE: Here we are passing our custom StyleSheet i.e. VRCStyleSheet
 // to enable autoScaling based on screen resolution
 
-const InlineStyle = _InlineStyle(VRCStyleSheet)
+const InlineStyle = _InlineStyle(config.stylesheet)
+
 const StyledNativeComponent = _StyledNativeComponent(
   constructWithOptions,
   InlineStyle,
@@ -49,5 +51,5 @@ aliases.split(/\s+/m).forEach(alias =>
   }),
 )
 
-export { css, ThemeProvider, withTheme }
+export { css, ThemeProvider, withTheme, config, setStyleSheet }
 export default styled
