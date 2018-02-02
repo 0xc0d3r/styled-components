@@ -4,3 +4,5 @@ dist
 .DS_Store
 bundle-stats.html
 .vscode
+__diff_output__
+test-results.json

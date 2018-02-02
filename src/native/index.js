@@ -10,6 +10,7 @@ import _constructWithOptions from '../constructors/constructWithOptions'
 import css from '../constructors/css'
 import ThemeProvider from '../models/ThemeProvider'
 import withTheme from '../hoc/withTheme'
+import isStyledComponent from '../utils/isStyledComponent'
 
 import type { Target } from '../types'
 
@@ -25,16 +26,16 @@ const InlineStyle = _InlineStyle(config.stylesheet)
 
 const StyledNativeComponent = _StyledNativeComponent(
   constructWithOptions,
-  InlineStyle,
+  InlineStyle
 )
 const styled = (tag: Target) => constructWithOptions(StyledNativeComponent, tag)
 
 /* React native lazy-requires each of these modules for some reason, so let's
 *  assume it's for a good reason and not eagerly load them all */
 const aliases = `ActivityIndicator ActivityIndicatorIOS ART Button DatePickerIOS DrawerLayoutAndroid
- Image ImageBackground ImageEditor ImageStore KeyboardAvoidingView ListView MapView Modal Navigator NavigatorIOS
+ Image ImageBackground ImageEditor ImageStore KeyboardAvoidingView ListView MapView Modal NavigatorIOS
  Picker PickerIOS ProgressBarAndroid ProgressViewIOS ScrollView SegmentedControlIOS Slider
- SliderIOS SnapshotViewIOS Switch RecyclerViewBackedScrollView RefreshControl StatusBar
+ SliderIOS SnapshotViewIOS Switch RecyclerViewBackedScrollView RefreshControl SafeAreaView StatusBar
  SwipeableListView SwitchAndroid SwitchIOS TabBarIOS Text TextInput ToastAndroid ToolbarAndroid
  Touchable TouchableHighlight TouchableNativeFeedback TouchableOpacity TouchableWithoutFeedback
  View ViewPagerAndroid WebView FlatList SectionList VirtualizedList`
@@ -48,8 +49,8 @@ aliases.split(/\s+/m).forEach(alias =>
     get() {
       return styled(reactNative[alias])
     },
-  }),
+  })
 )
 
-export { css, ThemeProvider, withTheme, config, setStyleSheet }
+export { css, isStyledComponent, ThemeProvider, withTheme, setStyleSheet }
 export default styled
