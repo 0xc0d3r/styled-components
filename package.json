@@ -1,7 +1,7 @@
 {
-  "name": "styled-components-project",
+  "name": "@rn/styled-components",
   "private": true,
-  "version": "4.1.3",
+  "version": "2.0.0-alpha1",
   "scripts": {
     "bs": "lerna bootstrap",
     "build": "lerna run build --stream --parallel",

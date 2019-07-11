@@ -14,7 +14,12 @@ import isStyledComponent from '../utils/isStyledComponent';
 
 import type { Target } from '../types';
 
-const InlineStyle = _InlineStyle(reactPrimitives.StyleSheet);
+import config, { setStyleSheet } from '../../../../src/config/index';
+
+// Keeping custom style sheet
+const InlineStyle = _InlineStyle(config.stylesheet);
+
+// const InlineStyle = _InlineStyle(reactPrimitives.StyleSheet);
 const StyledNativeComponent = _StyledNativeComponent(InlineStyle);
 const styled = (tag: Target) => constructWithOptions(StyledNativeComponent, tag);
 

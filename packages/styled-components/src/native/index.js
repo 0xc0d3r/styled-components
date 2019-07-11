@@ -14,7 +14,7 @@ import isStyledComponent from '../utils/isStyledComponent';
 
 import type { Target } from '../types';
 
-import config, { setStyleSheet } from '../config';
+import config, { setStyleSheet } from '../../../../src/config/index';
 
 const InlineStyle = _InlineStyle(config.stylesheet);
 const StyledNativeComponent = _StyledNativeComponent(InlineStyle);
