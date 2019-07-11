@@ -1,5 +1,6 @@
 {
   "name": "@rn/styled-components",
+  "private": true,
   "version": "2.0.0",
   "description": "Visual primitives for the component age. Use the best bits of ES6 and CSS to style your apps without stress",
   "main": "dist/styled-components.cjs.js",
@@ -108,5 +109,6 @@
   "collective": {
     "type": "opencollective",
     "url": "https://opencollective.com/styled-components"
-  }
+  },
+  "gitHead": "eb23442c6671e1982a9d3cee219320a1446bbd91"
 }
