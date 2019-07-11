@@ -3,14 +3,14 @@
  * @author: Anesh Parvatha
  */
 
-import { StyleSheet } from 'react-native'
+import { StyleSheet } from 'react-native';
 
 const config = {
   stylesheet: StyleSheet,
-}
+};
 
 const setStyleSheet = (stylesheet: any) => {
-  config.stylesheet = stylesheet
-}
+  config.stylesheet = stylesheet;
+};
 
-export { config as default, setStyleSheet }
+export { config as default, setStyleSheet };
