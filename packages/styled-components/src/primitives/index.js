@@ -14,7 +14,7 @@ import isStyledComponent from '../utils/isStyledComponent';
 
 import type { Target } from '../types';
 
-import config, { setStyleSheet } from '../../../../src/config/index';
+import config, { setStyleSheet } from '../src/config/index';
 
 // Keeping custom style sheet
 const InlineStyle = _InlineStyle(config.stylesheet);
@@ -39,5 +39,13 @@ aliases.split(/\s+/m).forEach(alias =>
   })
 );
 
-export { css, isStyledComponent, ThemeProvider, ThemeConsumer, ThemeContext, withTheme };
+export {
+  css,
+  isStyledComponent,
+  ThemeProvider,
+  ThemeConsumer,
+  ThemeContext,
+  withTheme,
+  setStyleSheet,
+};
 export default styled;

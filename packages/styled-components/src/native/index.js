@@ -1,7 +1,7 @@
 // @flow
 
 /* eslint-disable import/no-unresolved */
-import reactNative, { StyleSheet } from 'react-native';
+import reactNative from 'react-native';
 
 import _InlineStyle from '../models/InlineStyle';
 import _StyledNativeComponent from '../models/StyledNativeComponent';
@@ -14,7 +14,7 @@ import isStyledComponent from '../utils/isStyledComponent';
 
 import type { Target } from '../types';
 
-import config, { setStyleSheet } from '../../../../src/config/index';
+import config, { setStyleSheet } from '../src/config/index';
 
 const InlineStyle = _InlineStyle(config.stylesheet);
 const StyledNativeComponent = _StyledNativeComponent(InlineStyle);
